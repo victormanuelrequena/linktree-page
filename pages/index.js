@@ -58,12 +58,12 @@ export default function Linktree() {
               <p>AGENDAR LLAMADA</p>
             </div>
           </Link>
-          <Link href="">
+          {/* <Link href="">
             <div className="link-item">
               <Image className="icon" style={{ position: 'absolute' }} src={article} alt="Article" />
               <p>ARTICULO 1</p>
             </div>
-          </Link>
+          </Link> */}
         </div>
       </section>
       <style jsx>{`
