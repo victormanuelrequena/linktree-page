@@ -8,6 +8,7 @@ import backgroundTablet from 'assets/background-tablet.svg'
 import backgroundPhone from 'assets/backgroundPhone.svg'
 import { Inter, Poppins } from '@next/font/google';
 import Link from 'next/link';
+import Head from 'next/head';
 
 const inter = Inter({
   variable: '--inter-font',
@@ -24,6 +25,9 @@ const poppins = Poppins({
 export default function Linktree() {
   return (
     <>
+    <Head>
+      <title>Roberto Traspalacio</title>
+    </Head>
       <section className={`${inter.variable} ${poppins.variable}`}>
       <Image
           fill="cover"
@@ -41,12 +45,12 @@ export default function Linktree() {
             className="bg bg-phone"
         />
         <header className="header">
-          <Image src={roberto} alt="Roberto Traspalacio" />
+          <Image style={{borderRadius: '50%', border: '3px solid #000'}} width={140} height={140} quality={100} priority={true} src={roberto} alt="Roberto Traspalacio" />
           <h1>SoyTraspalacio</h1>
           <p>Diseñador de productos web y soluciones digitales</p>
         </header>
         <div className="links">
-          <Link target="_blank" href="https://soytraspalacio.com/">
+          <Link href="https://soytraspalacio.com/">
             <div className="link-item">
               <Image className="icon" style={{ position: 'absolute' }} src={world} alt="World wide" />
               <p>SITIO WEB</p>
@@ -125,6 +129,7 @@ export default function Linktree() {
           padding-right: 20px;
           position: relative;
           cursor: pointer;
+          transition: box-shadow .3s ease;
         }
         .link-item > p {
           width: 100%;
